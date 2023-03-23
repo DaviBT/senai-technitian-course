@@ -1,5 +1,5 @@
 ## byte to bit converter
-byteQuantidy = 2
+byteQuantidy = int(input("Enter byte: "))
 byteQuantidy = float(byteQuantidy)
 BYTE_TO_BIT_MULTIPLIER = 8
 
@@ -14,7 +14,7 @@ convertByteToBit(byteQuantidy , BYTE_TO_BIT_MULTIPLIER) ## result: 2.0 bytes is 
 
 
 ## bit to byte converter
-bitQuantidy = 16
+bitQuantidy = int(input("Enter bit: "))
 bitQuantidy = float(bitQuantidy)
 BIT_TO_BYTE_DIVIDER = 8
 
@@ -29,7 +29,7 @@ convertBitToByte(bitQuantidy, BIT_TO_BYTE_DIVIDER) ## result: 16.0 bits is equal
 
 
 ## byte to Kilobyte
-byteQuantidy = 1024
+byteQuantidy = int(input("Enter byte: "))
 byteQuantidy = float(byteQuantidy)
 BYTE_TO_KB_DIVIDER = 1024
 
@@ -43,7 +43,7 @@ def convertByteToKb(byteQuantidy, BYTE_TO_KB_DIVIDER):
 convertByteToKb(byteQuantidy, BYTE_TO_KB_DIVIDER) ## result: 1024.0 bytes is equal to 1.0 Kilobytes
 
 ## Kilobyte to byte
-kbQuantidy = 1
+kbQuantidy = int(input("Enter kilobyte: "))
 kbQuantidy = float(kbQuantidy)
 KB_TO_BYTE_MULTIPLIER = 1024
 
@@ -58,7 +58,7 @@ convertKbToByte(kbQuantidy, KB_TO_BYTE_MULTIPLIER) ## result: 1.0 Kilobyte is eq
 
 
 ## Kilobyte to Megabyte
-kbQuantidy = 1024
+kbQuantidy = int(input("Enter kilobyte: "))
 kbQuantidy = float(kbQuantidy)
 KB_TO_MB_DIVIDER = 1024
 
@@ -73,7 +73,7 @@ convertKbToMb(kbQuantidy, KB_TO_MB_DIVIDER) ## result: 1024.0 Kilobytes is equal
 
 
 ## Megabyte to Kilobyte
-mbQuantidy = 1
+mbQuantidy = int(input("Enter megabyte: "))
 mbQuantidy = float(mbQuantidy)
 MB_TO_KB_MULTIPLIER = 1024
 
@@ -88,7 +88,7 @@ convertKbToMb(mbQuantidy, MB_TO_KB_MULTIPLIER) ## result: 1.0 Megabytes is equal
 
 
 ## Megabyte to Gigabyte
-megabyteQuantidy = 1024
+megabyteQuantidy = int(input("Enter megabyte: "))
 megabyteQuantidy = float(megabyteQuantidy)
 MB_TO_GB_DIVIDER = 1024
 
@@ -103,7 +103,7 @@ convertMbToGb(megabyteQuantidy, MB_TO_GB_DIVIDER) ## result: 1024.0 Megabytes is
 
 
 ## Gigabyte to Megabyte
-gbQuantidy = 1
+gbQuantidy = int(input("Enter gigabyte: "))
 gbQuantidy = float(gbQuantidy)
 GB_TO_MB_MULTIPLIER = 1024
 
@@ -118,7 +118,7 @@ convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER) ## result: 1.0 Gigabytes is equal
 
 
 ## Gigabyte to Terabyte
-gbQuantidy = 1024
+gbQuantidy = int(input("Enter gigabyte: "))
 gbQuantidy = float(gbQuantidy)
 GB_TO_TB_DIVIDER = 1024
 
@@ -133,7 +133,7 @@ convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER) ## result: 1024.0 Gigabytes is eq
 
 
 ## Terabyte to Gigabyte
-tbQuantidy = 1
+tbQuantidy = int(input("Enter terabyte: "))
 tbQuantidy = float(tbQuantidy)
 TB_TO_GB_MULTIPLIER = 1024
 
@@ -148,7 +148,7 @@ convertTbToGb(tbQuantidy, TB_TO_GB_MULTIPLIER) ## result: 1.0 Terabytes is equal
 
 
 ## Terabyte to Petabyte
-tbQuantidy = 1024
+tbQuantidy = int(input("Enter terabyte: "))
 tbQuantidy = float(tbQuantidy)
 TB_TO_PB_DIVIDER = 1024
 
@@ -163,7 +163,7 @@ convertTbToPb(tbQuantidy, TB_TO_PB_DIVIDER) ## result: 1024.0 Terabytes is equal
 
 
 ## Petabyte to Terabyte
-PbQuantidy = 1
+PbQuantidy = int(input("Enter petabyte: "))
 PbQuantidy = float(PbQuantidy)
 PB_TO_TB_MULTIPLIER = 1024
 
