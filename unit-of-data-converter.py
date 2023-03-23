@@ -1,5 +1,3 @@
-
-
 ## byte to bit converter
 byteQuantidy = 2
 byteQuantidy = float(byteQuantidy)
@@ -87,3 +85,33 @@ def convertKbToMb(mbQuantidy, MB_TO_KB_MULTIPLIER):
     return print(strMbQuantidy + " Megabytes " + "is equal to " + strKbQuantidy + " Kilobytes")
 
 convertKbToMb(mbQuantidy, MB_TO_KB_MULTIPLIER) ## result: 1.0 Megabytes is equal to 1024.0 Kilobytes
+
+
+## Megabyte to Gigabyte
+megabyteQuantidy = 1024
+megabyteQuantidy = float(megabyteQuantidy)
+MB_TO_GB_DIVIDER = 1024
+
+def convertMbToGb(megabyteQuantidy, MB_TO_GB_DIVIDER):
+    gigabyteQuantidy = megabyteQuantidy / MB_TO_GB_DIVIDER
+    gigabyteQuantidy = float(gigabyteQuantidy)
+    strGigabyteQuantidy = str(gigabyteQuantidy)
+    strMegabyteQuantidy = str(megabyteQuantidy)
+    return print(strMegabyteQuantidy + " Megabytes " + "is equal to " + strGigabyteQuantidy + " Gigabytes")
+
+convertMbToGb(megabyteQuantidy, MB_TO_GB_DIVIDER) ## result: 1024.0 Megabytes is equal to 1.0 Gigabytes
+
+
+## Gigabyte to Megabyte
+gbQuantidy = 1
+gbQuantidy = float(gbQuantidy)
+GB_TO_MB_MULTIPLIER = 1024
+
+def convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER):
+    mbQuantidy = gbQuantidy * GB_TO_MB_MULTIPLIER
+    mbQuantidy = float(mbQuantidy)
+    strMbQuantidy = str(mbQuantidy)
+    strGbQuantidy = str(gbQuantidy)
+    return print(strGbQuantidy + " Gigabytes " + "is equal to " + strMbQuantidy + " Megabytes")
+
+convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER) ## result: 1.0 Gigabytes is equal to 1024.0 Megabytes
