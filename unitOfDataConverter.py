@@ -2,9 +2,10 @@
 
 BYTE_TO_BIT_MULTIPLIER = 8
 
-def convertByteToBit(BYTE_TO_BIT_MULTIPLIER):
-    byteQuantidy = int(input("Enter byte: "))
-    byteQuantidy = float(byteQuantidy)
+byteQuantidy = int(input("Enter byte: "))
+byteQuantidy = float(byteQuantidy)
+def convertByteToBit(byteQuantidy , BYTE_TO_BIT_MULTIPLIER):
+  
     bitQuantidy = byteQuantidy * BYTE_TO_BIT_MULTIPLIER
     bitQuantidy = float(bitQuantidy)
     strByteQuantidy = str(byteQuantidy)
@@ -16,11 +17,11 @@ convertByteToBit(byteQuantidy , BYTE_TO_BIT_MULTIPLIER) ## result: 2.0 bytes is 
 
 ## bit to byte converter
 
-BIT_TO_BYTE_DIVIDER = 8
 
+bitQuantidy = int(input("Enter bit: "))
+bitQuantidy = float(bitQuantidy)
 def convertBitToByte(bitQuantidy, BIT_TO_BYTE_DIVIDER):
-    bitQuantidy = int(input("Enter bit: "))
-    bitQuantidy = float(bitQuantidy)
+    BIT_TO_BYTE_DIVIDER = 8
     byteQuantidy = bitQuantidy / BIT_TO_BYTE_DIVIDER
     byteQuantidy = float(byteQuantidy)
     strBitQuantidy = str(bitQuantidy)
