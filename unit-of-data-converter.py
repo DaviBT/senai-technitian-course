@@ -12,7 +12,7 @@ def convertByteToBit(byteQuantidy , BYTE_TO_BIT_MULTIPLIER):
     strBitQuantidy = str(bitQuantidy)
     return print(strByteQuantidy + " bytes " + "is equal to " + strBitQuantidy + " bites")
 
-convertByteToBit(byteQuantidy , BYTE_TO_BIT_MULTIPLIER) ## result: 16.0 bits is equal to 2.0 bytes
+convertByteToBit(byteQuantidy , BYTE_TO_BIT_MULTIPLIER) ## result: 2.0 bytes is equal to 16.0 bits
 
 
 ## bit to byte converter
@@ -28,3 +28,18 @@ def convertBitToByte(bitQuantidy, BIT_TO_BYTE_DIVIDER):
     return print(strBitQuantidy + " bits " + "is equal to " + strByteQuantidy + " bytes")
 
 convertBitToByte(bitQuantidy, BIT_TO_BYTE_DIVIDER) ## result: 16.0 bits is equal to 2.0 bytes
+
+
+## byte to Kilobyte
+byteQuantidy = 1024
+byteQuantidy = float(byteQuantidy)
+BYTE_TO_KB_DIVIDER = 1024
+
+def convertByteToKb(byteQuantidy, BYTE_TO_KB_DIVIDER):
+    KbQuantidy = byteQuantidy / BYTE_TO_KB_DIVIDER
+    KbQuantidy = float(KbQuantidy)
+    strByteQuantidy = str(byteQuantidy)
+    strKbQuantidy = str(KbQuantidy)
+    return print(strByteQuantidy + " bytes " + "is equal to " + strKbQuantidy + " Kilobytes")
+
+convertByteToKb(byteQuantidy, BYTE_TO_KB_DIVIDER) ## result: 1024.0 bytes is equal to 1.0 Kilobytes
