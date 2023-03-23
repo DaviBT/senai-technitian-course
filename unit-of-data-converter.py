@@ -59,3 +59,16 @@ def convertKbToByte(kbQuantidy, KB_TO_BYTE_MULTIPLIER):
 convertKbToByte(kbQuantidy, KB_TO_BYTE_MULTIPLIER) ## result: 1.0 Kilobyte is equal to 1024.0 bytes
 
 
+## Kilobyte to Megabyte
+kbQuantidy = 1024
+kbQuantidy = float(kbQuantidy)
+KB_TO_MB_DIVIDER = 1024
+
+def convertKbToMb(kbQuantidy, KB_TO_MB_DIVIDER):
+    mbQuantidy = kbQuantidy / KB_TO_MB_DIVIDER
+    mbQuantidy = float(mbQuantidy)
+    strMbQuantidy = str(mbQuantidy)
+    strKbQuantidy = str(kbQuantidy)
+    return print(strKbQuantidy + " Kilobytes " + "is equal to " + strMbQuantidy + " Megabytes")
+
+convertKbToMb(kbQuantidy, KB_TO_MB_DIVIDER) ## result: 1024.0 Kilobytes is equal to 1.0 Megabytes
