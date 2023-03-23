@@ -152,11 +152,26 @@ tbQuantidy = 1024
 tbQuantidy = float(tbQuantidy)
 TB_TO_PB_DIVIDER = 1024
 
-def convertTbToGb(tbQuantidy, TB_TO_PB_DIVIDER):
+def convertTbToPb(tbQuantidy, TB_TO_PB_DIVIDER):
     pbQuantidy = tbQuantidy / TB_TO_PB_DIVIDER
     pbQuantidy = float(pbQuantidy)
     strPbQuantidy = str(pbQuantidy)
     strTbQuantidy = str(tbQuantidy)
     return print(strTbQuantidy + " Terabytes " + "is equal to " + strPbQuantidy + " Petabytes")
 
-convertTbToGb(tbQuantidy, TB_TO_PB_DIVIDER) ## result: 1024.0 Terabytes is equal to 1.0 Petabytes
+convertTbToPb(tbQuantidy, TB_TO_PB_DIVIDER) ## result: 1024.0 Terabytes is equal to 1.0 Petabytes
+
+
+## Petabyte to Terabyte
+PbQuantidy = 1
+PbQuantidy = float(PbQuantidy)
+PB_TO_TB_MULTIPLIER = 1024
+
+def convertPbToTb(PbQuantidy, PB_TO_TB_MULTIPLIER):
+    tbQuantidy = PbQuantidy * PB_TO_TB_MULTIPLIER
+    tbQuantidy = float(tbQuantidy)
+    strTbQuantidy = str(tbQuantidy)
+    strPbQuantidy = str(PbQuantidy)
+    return print(strPbQuantidy + " Petabytes " + "is equal to " + strTbQuantidy + " Terabytes")
+
+convertPbToTb(PbQuantidy, PB_TO_TB_MULTIPLIER) ## result: 1.0 Petabytes is equal to 1024.0 Terabytes
