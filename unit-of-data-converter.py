@@ -115,3 +115,18 @@ def convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER):
     return print(strGbQuantidy + " Gigabytes " + "is equal to " + strMbQuantidy + " Megabytes")
 
 convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER) ## result: 1.0 Gigabytes is equal to 1024.0 Megabytes
+
+
+## Gigabyte to Terabyte
+gbQuantidy = 1024
+gbQuantidy = float(gbQuantidy)
+GB_TO_TB_DIVIDER = 1024
+
+def convertGbToMb(gbQuantidy, GB_TO_TB_DIVIDER):
+    tbQuantidy = gbQuantidy / GB_TO_TB_DIVIDER
+    tbQuantidy = float(tbQuantidy)
+    strTbQuantidy = str(tbQuantidy)
+    strGbQuantidy = str(gbQuantidy)
+    return print(strGbQuantidy + " Gigabytes " + "is equal to " + strTbQuantidy + " Terabytes")
+
+convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER) ## result: 1024.0 Gigabytes is equal to 1.0 Terabytes
