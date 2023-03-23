@@ -77,14 +77,14 @@ mbQuantidy = int(input("Enter megabyte: "))
 mbQuantidy = float(mbQuantidy)
 MB_TO_KB_MULTIPLIER = 1024
 
-def convertKbToMb(mbQuantidy, MB_TO_KB_MULTIPLIER):
+def convertMbToKb(mbQuantidy, MB_TO_KB_MULTIPLIER):
     kbQuantidy = mbQuantidy * MB_TO_KB_MULTIPLIER
     kbQuantidy = float(kbQuantidy)
     strKbQuantidy = str(kbQuantidy)
     strMbQuantidy = str(mbQuantidy)
     return print(strMbQuantidy + " Megabytes " + "is equal to " + strKbQuantidy + " Kilobytes")
 
-convertKbToMb(mbQuantidy, MB_TO_KB_MULTIPLIER) ## result: 1.0 Megabytes is equal to 1024.0 Kilobytes
+convertMbToKb(mbQuantidy, MB_TO_KB_MULTIPLIER) ## result: 1.0 Megabytes is equal to 1024.0 Kilobytes
 
 
 ## Megabyte to Gigabyte
@@ -122,14 +122,14 @@ gbQuantidy = int(input("Enter gigabyte: "))
 gbQuantidy = float(gbQuantidy)
 GB_TO_TB_DIVIDER = 1024
 
-def convertGbToMb(gbQuantidy, GB_TO_TB_DIVIDER):
+def convertGbToTb(gbQuantidy, GB_TO_TB_DIVIDER):
     tbQuantidy = gbQuantidy / GB_TO_TB_DIVIDER
     tbQuantidy = float(tbQuantidy)
     strTbQuantidy = str(tbQuantidy)
     strGbQuantidy = str(gbQuantidy)
     return print(strGbQuantidy + " Gigabytes " + "is equal to " + strTbQuantidy + " Terabytes")
 
-convertGbToMb(gbQuantidy, GB_TO_MB_MULTIPLIER) ## result: 1024.0 Gigabytes is equal to 1.0 Terabytes
+convertGbToTb(gbQuantidy, GB_TO_TB_MULTIPLIER) ## result: 1024.0 Gigabytes is equal to 1.0 Terabytes
 
 
 ## Terabyte to Gigabyte
