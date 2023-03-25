@@ -1,38 +1,66 @@
 BYTE_SIZE = 8
 BYTE_FACTOR = 1024
 
+def convertStringToFloat(value):
+    print('Value converted from string to float')
+    return float(value)
+
 def convertByteToBit(byte):
-    return byte * BYTE_SIZE
+    print('Byte to Bit calculated')
+    bit = byte * BYTE_SIZE
+    return bit
 
 def convertBitToByte(bit):
-    return bit / BYTE_SIZE
+    print('Bit to Byte calculated')
+    byte = bit / BYTE_SIZE
+    return byte
 
 def convertByteToKb(byte):
-    return byte / BYTE_FACTOR
+    print('Byte to Kb calculated')
+    kb = byte / BYTE_FACTOR
+    return kb
 
 def convertKbToByte(kb):
-    return kb * BYTE_FACTOR
+    print('Kb to Byte calculated')
+    byte = kb * BYTE_FACTOR
+    return byte
 
 def convertKbToMb(kb):
-    return kb / BYTE_FACTOR
+    print('Kb to mb calculated')
+    mb = kb / BYTE_FACTOR
+    return mb
 
 def convertMbToKb(mb):
-    return mb * BYTE_FACTOR
+    print('mb to kb calculated')
+    kb = mb * BYTE_FACTOR
+    return kb
 
 def convertMbToGb(mb):
-    return mb / BYTE_FACTOR
+    print('mb to gb calculated')
+    gb = mb / BYTE_FACTOR
+    return gb
 
 def convertGbToMb(gb):
-    return gb * BYTE_FACTOR
+    print('gb to mb calculated')
+    mb = gb * BYTE_FACTOR
+    return mb 
 
 def convertGbToTb(gb):
-    return gb / BYTE_FACTOR
+    print('gb to tb calculated')
+    tb = gb / BYTE_FACTOR
+    return tb
 
 def convertTbToGb(tb):
-    return tb * BYTE_FACTOR
+    print('tb to gb calculated')
+    gb = tb * BYTE_FACTOR
+    return gb
 
 def convertTbToPb(tb):
-    return tb / BYTE_FACTOR
+    print('tb to pb calculated')
+    pb = tb / BYTE_FACTOR
+    return pb
 
 def convertPbToTb(pb):
-    return pb * BYTE_FACTOR
+    print('pb to tb calculated')
+    tb = pb * BYTE_FACTOR
+    return tb
