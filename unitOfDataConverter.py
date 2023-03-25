@@ -1,13 +1,9 @@
 BYTE_SIZE = 8
 BYTE_FACTOR = 1024
 
-def convertStringToFloat(value):
-    print('Value converted from string to float')
-    return float(value)
-
-def convertByteToBit(valueToBeConverted):
+def convertByteToBit(byte):
     print('Byte to Bit calculated')
-    bit = valueToBeConverted * BYTE_SIZE
+    bit = byte * BYTE_SIZE
     return bit
 
 def convertBitToByte(bit):
@@ -65,7 +61,11 @@ def convertPbToTb(pb):
     tb = pb * BYTE_FACTOR
     return tb
 
+#######################
+
+def convertStringToFloat(value):
+    print('Value converted from string to float.')
+    return float(value)
+
 print('Enter the value you want to convert: ')
 inputValueToBeConverted  = convertStringToFloat(input())
-ConvertedValue = convertByteToBit(inputValueToBeConverted)
-print(ConvertedValue)
