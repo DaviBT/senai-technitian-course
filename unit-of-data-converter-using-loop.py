@@ -13,5 +13,9 @@ def converterFunction(quantidyNum, origin, end):
 
     displacement = end - origin
 
-    ## transforming the unit into byte
-    initialQuantidyByte = quantidyNum * (BIT_FACTOR ** displacement)
+    ## transforming the unit into bit
+    quantidyBit = quantidyNum * (BIT_FACTOR ** displacement)
+    ## transforming the bits into the unit of data
+    quantidyConverted = quantidyBit / (BIT_FACTOR ** end)
+
+    return quantidyConverted
