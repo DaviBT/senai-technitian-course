@@ -1,21 +1,9 @@
 units = ["bit", "byte", "KB", "MB", "GB", "TB", "PB"]
 
 origin = input("Enter the unit of data you want to convert (example: bit, KB, GB): ")
-quantidy = input("Enter the quantidy you want to convert: ")
-quantidyNum = float(quantidy)
+quantity = input("Enter the quantity you want to convert: ")
+quantityNum = float(quantity)
 end = input("Enter the unit of data you want to get (example: byte, MB, TB): ")
 
 BIT_FACTOR = 1024
 
-def converterFunction(quantidyNum, origin, end):
-    origin = units.index(origin)
-    end = units.index(end)
-
-    displacement = end - origin
-
-    ## transforming the unit into bit
-    quantidyBit = quantidyNum * (BIT_FACTOR ** displacement)
-    ## transforming the bits into the unit of data
-    quantidyConverted = quantidyBit / (BIT_FACTOR ** end)
-
-    return quantidyConverted
