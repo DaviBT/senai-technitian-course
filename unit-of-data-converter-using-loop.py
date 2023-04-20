@@ -17,11 +17,18 @@ def converterFunction(quantidyNum, origin, end):
     displacement = endNum - originNum
     positiveDisplacement = abs(displacement)
 
+
     # transforming bit to byte
     if originNum == 0:
         byteValue = quantidyNum / 8 
         finalQuantidy = byteValue / (BIT_FACTOR ** displacement)
         return finalQuantidy
+    
+    if endNum == 0:
+        finalQuantidy = quantidyNum * (BIT_FACTOR ** positiveDisplacement)
+        finalBitQuantidy = finalQuantidy * 8
+        return finalBitQuantidy
+
 
     ## multiply or divide
     if displacement < 0: ## it will multiply
