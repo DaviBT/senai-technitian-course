@@ -1,27 +1,45 @@
 units = ["bit", "byte", "KB", "MB", "GB", "TB", "PB"]
 
 origin = input("Enter the unit of data you want to convert (example: bit, KB, GB): ")
-quantidy = input("Enter the quantity you want to convert: ")
+quantidy = input("Enter the quantidy you want to convert: ")
 quantidyNum = float(quantidy)
 end = input("Enter the unit of data you want to get (example: byte, MB, TB): ")
 
 BIT_FACTOR = 1024
 
 def converterFunction(quantidyNum, origin, end):
-    originNum = units.index(origin)
-    endNum = units.index(end)
-    factor = 1
-    
-    if originNum > endNum:
-        factor = 1 / (BIT_FACTOR ** (originNum - endNum))
-    elif originNum < endNum:
-        factor = BIT_FACTOR ** (endNum - originNum)
+    for u in units:
+        if origin not in units:
+            print('This is not a valid data!')
+        if end not in units:
+            print('This is not a valid data!')
 
-    byteValue = quantidyNum * factor
-    
+    for i in units:
+        if i == origin:
+            originNum = units.index(i)
+        if i == end:
+            endNum = units.index(i)
+    displacement = endNum - originNum
+    positiveDisplacement = abs(displacement)
+
+ # transforming bit to byte to transform a bit value to any other unit
+    if originNum == 0:
+        byteValue = quantidyNum / 8 
+        finalQuantidy = byteValue / (BIT_FACTOR ** displacement)
+        return finalQuantidy
+
+    ## conveting any value to bit
     if endNum == 0:
-        return byteValue * 8
+        finalQuantidy = quantidyNum * (BIT_FACTOR ** positiveDisplacement)
+        finalBitQuantidy = finalQuantidy * 8
+        return finalBitQuantidy
+    ## multiply or divide
+    if displacement < 0: ## it will multiply
+        finalQuantidy = quantidyNum * (BIT_FACTOR ** positiveDisplacement)
+        return finalQuantidy
     
-    return byteValue / (BIT_FACTOR ** (endNum * 10))
-
+    elif displacement > 0: # it will divide
+        finalQuantidy = quantidyNum / (BIT_FACTOR ** displacement)
+        return finalQuantidy
+    
 print(converterFunction(quantidyNum, origin, end))
