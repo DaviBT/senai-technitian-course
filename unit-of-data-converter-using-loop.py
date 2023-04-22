@@ -1,19 +1,19 @@
 units = ["bit", "byte", "KB", "MB", "GB", "TB", "PB"]
 
 origin = input("Enter the unit of data you want to convert (example: bit, KB, GB): ")
+while origin not in units:
+    origin = input("Enter a valid unit of data you want to convert (example: bit, KB, GB): ")
+
 quantidy = input("Enter the quantidy you want to convert: ")
 quantidyNum = float(quantidy)
+
 end = input("Enter the unit of data you want to get (example: byte, MB, TB): ")
+while end not in units:
+    end = input("Enter a valid unit of data you want to get (example: byte, MB, TB): ")
 
 BIT_FACTOR = 1024
 
 def converterFunction(quantidyNum, origin, end):
-    for u in units:
-        if origin not in units:
-            print('This is not a valid data!')
-        if end not in units:
-            print('This is not a valid data!')
-
     for i in units:
         if i == origin:
             originNum = units.index(i)
@@ -22,6 +22,16 @@ def converterFunction(quantidyNum, origin, end):
 
     displacement = endNum - originNum
     positiveDisplacement = abs(displacement)
+
+    # transforming bit to byte
+    if originNum == 0 and endNum == 1:
+        finalQuantidy = quantidyNum / 8
+        return finalQuantidy
+    
+    # transforming byte to bit
+    if originNum == 1 and endNum == 0:
+        finalQuantidy = quantidyNum * 8
+        return finalQuantidy
 
     # transforming bit to byte to transform a bit value to any other unit
     if originNum == 0:
