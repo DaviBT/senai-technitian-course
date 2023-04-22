@@ -25,15 +25,17 @@ def converterFunction(quantidyNum, origin, end):
 
     # transforming bit to byte to transform a bit value to any other unit
     if originNum == 0:
-        byteValue = quantidyNum / 8 
-        finalQuantidy = byteValue / (BIT_FACTOR ** displacement)
-        return finalQuantidy
+        byteValue = quantidyNum / 8
+        for conversion in range(positiveDisplacement):
+            finalQuantidy = byteValue / BIT_FACTOR
+            return finalQuantidy
 
-    ## conveting any value to bit
+    ## converting any value to bit
     if endNum == 0:
-        finalQuantidy = quantidyNum * (BIT_FACTOR ** positiveDisplacement)
-        finalBitQuantidy = finalQuantidy * 8
-        return finalBitQuantidy
+        for conversion in range(positiveDisplacement):
+            finalQuantidy = quantidyNum * BIT_FACTOR
+            finalBitQuantidy = finalQuantidy * 8
+            return finalBitQuantidy
     
     ## multiply or divide
     if displacement < 0: ## it will multiply
