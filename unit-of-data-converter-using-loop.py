@@ -19,10 +19,11 @@ def converterFunction(quantidyNum, origin, end):
             originNum = units.index(i)
         if i == end:
             endNum = units.index(i)
+
     displacement = endNum - originNum
     positiveDisplacement = abs(displacement)
 
- # transforming bit to byte to transform a bit value to any other unit
+    # transforming bit to byte to transform a bit value to any other unit
     if originNum == 0:
         byteValue = quantidyNum / 8 
         finalQuantidy = byteValue / (BIT_FACTOR ** displacement)
@@ -33,13 +34,16 @@ def converterFunction(quantidyNum, origin, end):
         finalQuantidy = quantidyNum * (BIT_FACTOR ** positiveDisplacement)
         finalBitQuantidy = finalQuantidy * 8
         return finalBitQuantidy
+    
     ## multiply or divide
     if displacement < 0: ## it will multiply
-        finalQuantidy = quantidyNum * (BIT_FACTOR ** positiveDisplacement)
-        return finalQuantidy
+        for conversion in range(positiveDisplacement):
+            finalQuantidy = quantidyNum * BIT_FACTOR
+            return finalQuantidy
     
     elif displacement > 0: # it will divide
-        finalQuantidy = quantidyNum / (BIT_FACTOR ** displacement)
-        return finalQuantidy
+        for conversion in range(positiveDisplacement):
+            finalQuantidy = quantidyNum / BIT_FACTOR
+            return finalQuantidy
     
 print(converterFunction(quantidyNum, origin, end))
