@@ -28,24 +28,24 @@ def converterFunction(quantidyNum, origin, end):
         byteValue = quantidyNum / 8
         for conversion in range(positiveDisplacement):
             finalQuantidy = byteValue / BIT_FACTOR
-            return finalQuantidy
+        return finalQuantidy    
 
     ## converting any value to bit
     if endNum == 0:
         for conversion in range(positiveDisplacement):
             finalQuantidy = quantidyNum * BIT_FACTOR
             finalBitQuantidy = finalQuantidy * 8
-            return finalBitQuantidy
+        return finalBitQuantidy    
     
     ## multiply or divide
     if displacement < 0: ## it will multiply
         for conversion in range(positiveDisplacement):
             finalQuantidy = quantidyNum * BIT_FACTOR
-            return finalQuantidy
+        return finalQuantidy    
     
     elif displacement > 0: # it will divide
         for conversion in range(positiveDisplacement):
             finalQuantidy = quantidyNum / BIT_FACTOR
-            return finalQuantidy
+        return finalQuantidy    
     
 print(converterFunction(quantidyNum, origin, end))
