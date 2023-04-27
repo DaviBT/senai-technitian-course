@@ -23,6 +23,9 @@ def converterFunction(quantidyNum, origin, end):
     displacement = endNum - originNum
     positiveDisplacement = abs(displacement)
 
+    if positiveDisplacement == 0:
+        return  quantidyNum
+
     # transforming bit to byte
     if originNum == 0 and endNum == 1:
         finalQuantidy = quantidyNum / 8
