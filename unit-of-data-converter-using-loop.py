@@ -42,7 +42,7 @@ def converterFunction(quantidyNum, origin, end):
 
     ## converting any value to bit
     if endNum == 0:
-        for conversion in range(positiveDisplacement):
+        for conversion in range(positiveDisplacement - 1):
             finalQuantidy = quantidyNum * BIT_FACTOR
             finalBitQuantidy = finalQuantidy * 8
         return finalBitQuantidy    
