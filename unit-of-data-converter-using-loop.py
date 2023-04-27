@@ -11,7 +11,7 @@ end = input("Enter the unit of data you want to get (example: byte, MB, TB): ")
 while end not in units:
     end = input("Enter a valid unit of data you want to get (example: byte, MB, TB): ")
 
-CONVERSION_FACTOR = 1024
+BIT_FACTOR = 1024
 
 def converterFunction(quantidyNum, origin, end):
     for i in units:
@@ -37,25 +37,25 @@ def converterFunction(quantidyNum, origin, end):
     if originNum == 0:
         byteValue = quantidyNum / 8
         for conversion in range(positiveDisplacement):
-            finalQuantidy = byteValue / CONVERSION_FACTOR
+            finalQuantidy = byteValue / BIT_FACTOR
         return finalQuantidy    
 
     ## converting any value to bit
     if endNum == 0:
         for conversion in range(positiveDisplacement):
-            finalQuantidy = quantidyNum * CONVERSION_FACTOR
+            finalQuantidy = quantidyNum * BIT_FACTOR
             finalBitQuantidy = finalQuantidy * 8
         return finalBitQuantidy    
     
     ## multiply or divide
     if displacement < 0: ## it will multiply
         for conversion in range(positiveDisplacement):
-            finalQuantidy = quantidyNum * CONVERSION_FACTOR
+            finalQuantidy = quantidyNum * BIT_FACTOR
         return finalQuantidy    
     
     elif displacement > 0: # it will divide
         for conversion in range(positiveDisplacement):
-            finalQuantidy = quantidyNum / CONVERSION_FACTOR
+            finalQuantidy = quantidyNum / BIT_FACTOR
         return finalQuantidy    
     
 print(converterFunction(quantidyNum, origin, end))
